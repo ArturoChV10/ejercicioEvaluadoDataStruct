@@ -16,7 +16,11 @@ class Sintoma : public INodo {
     public:
         Sintoma(string pNombre) {
             this->setNombre(pNombre);
-            this->setId(rand()*99999999999);
+            int num = rand();
+            if(num < 0) {
+                num = num * -1;
+            }
+            this->setId(num);
         }
 
         string getNombre() {

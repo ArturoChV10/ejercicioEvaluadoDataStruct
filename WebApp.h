@@ -8,9 +8,8 @@ using namespace std;
 
 class WebApp : public INodo {
     public:
-        WebApp(string pNombre) {
-            int num = rand()*99999999999;
-            this->setId(num);
+        WebApp(int pId, string pNombre) {
+            this->setId(pId);
             this->setNombre(pNombre);
         }
 
